@@ -1,0 +1,41 @@
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.sdf
+*.cache
+*.dbmdl
+*.pdb
+*.aps
+
+# Build results
+[Bb]in/
+[Oo]bj/
+x64/
+*.exe
+*.dll
+*.lib
+*.app
+*.log
+
+# Others
+*.ipch
+*.tlog
+*.lastbuildstate
+*.idb
+*.iobj
+*.ipdb
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+*.class
+
+# Temporary
+*.tmp
+*.bak
+*.old
+*.swp
+
+# Ignore config
+*.userosscache
+*.sln.docstates
