@@ -24,12 +24,21 @@
     <ClCompile Include="PhoneBook.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BinaryTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TechnicalFunc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PhoneBook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Record.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

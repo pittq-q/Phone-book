@@ -50,7 +50,7 @@ int UserChoice(int count, const char* error, const char* whatToEnter)
 		CheckingInput(InputType::Extraction);
 		if (checkForAString[1] != '\0' || (checkForAString[0] - '0') < 1 || (checkForAString[0] - '0') > count)
 		{
-			std::cout << error << std::endl;
+			std::cerr << error << std::endl;
 		}
 		else
 		{

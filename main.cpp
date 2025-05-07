@@ -6,7 +6,6 @@ int main(int argc, char* argv[])
 	CheckCorrectInputCommand(argc, argv);
 
 	PhoneBook phoneBook{ argv[1] };
-
 	phoneBook.IsOpen();
 
 	system("cls");
@@ -21,7 +20,7 @@ int main(int argc, char* argv[])
 	switch (UserChoice(6, "Your choice is uncorrect. Please, choose from the following.", "Enter your choice"))
 	{
 	case 1:
-
+		phoneBook.ReadPhoneBook();
 		break;
 	case 2:
 
