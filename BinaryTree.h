@@ -1,6 +1,6 @@
 #pragma once
 #include "Record.h"
-#include "PhoneBook.h"
+#include "TechnicalFunc.h"
 
 class BinaryTree
 {
@@ -8,18 +8,27 @@ private:
 	struct Node
 	{
 		Record record;
-		Node* right;
 		Node* left;
+		Node* right;
 	};
 
-	Node* root = nullptr;
+	Node* root;
+	int sortType;
 
-	void LoopForInsert();
+	int Compare(const Record& first, const Record& second) const;
+
+	void Clear();
+
+	void RemoveSubTree(Node* node);
+
+	void ShowATree(Node* node) const;
 
 public:
-	BinaryTree() = default;
+	BinaryTree(std::fstream& file, int whatTypeOfSorting);
 
-	BinaryTree(const std::fstream& file, int whatTypeOfSorting);
+	~BinaryTree();
 
-	void Insert(Record record, int whatTypeOfSorting);
+	bool Insert(const Record& record);
+
+	void Show() const;
 };

@@ -1,23 +1,23 @@
 #include "PhoneBook.h"
 
-void PhoneBook::ReadPhoneBookSortByName() const
+void PhoneBook::ReadPhoneBookSorted(const BinaryTree* tree) const
 {
-	BinaryTree tree{ file, 1 };
-}
-
-void PhoneBook::ReadPhoneBookSortByPhoneNumber() const
-{
-	BinaryTree tree{ file, 2 };
-}
-
-void PhoneBook::ReadPhoneBookSortByAddress() const
-{
-	BinaryTree tree{ file, 3 };
+	tree->Show();
 }
 
 PhoneBook::PhoneBook(char* argv)
 {
 	file.open(argv, std::ios::in | std::ios::out);
+	IsOpen();
+	treeWithSortingByName = new BinaryTree{ file, 1 };
+	file.clear();
+	file.seekg(0, std::ios::beg);
+	treeWithSortingByPhoneNumber = new BinaryTree{ file, 2 };
+	file.clear();
+	file.seekg(0, std::ios::beg);
+	treeWithSortingByAddress = new BinaryTree{ file, 3 };
+	file.clear();
+	file.seekg(0, std::ios::beg);
 }
 
 PhoneBook::~PhoneBook()
@@ -36,7 +36,7 @@ bool PhoneBook::IsOpen() const
 	return true;
 }
 
-void PhoneBook::ReadPhoneBook() const
+void PhoneBook::ReadPhoneBook()
 {
 	std::cout << "Which sorting do you choose?" << std::endl
 		<< "1 - By Full name;" << std::endl
@@ -47,13 +47,13 @@ void PhoneBook::ReadPhoneBook() const
 	switch (UserChoice(4, "Your choice is uncorrect. Please, choose from the following.", "Enter your choice"))
 	{
 	case 1:
-		ReadPhoneBookSortByName();
+		ReadPhoneBookSorted(treeWithSortingByName);
 		break;
 	case 2:
-		ReadPhoneBookSortByPhoneNumber();
+		ReadPhoneBookSorted(treeWithSortingByPhoneNumber);
 		break;
 	case 3:
-		ReadPhoneBookSortByAddress();
+		ReadPhoneBookSorted(treeWithSortingByAddress);
 		break;
 	case 4:
 		return;

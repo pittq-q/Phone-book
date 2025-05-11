@@ -7,11 +7,11 @@ class PhoneBook
 private:
 	std::fstream file;
 
-	void ReadPhoneBookSortByName() const;
+	BinaryTree* treeWithSortingByName;
+	BinaryTree* treeWithSortingByPhoneNumber;
+	BinaryTree* treeWithSortingByAddress;
 
-	void ReadPhoneBookSortByPhoneNumber() const;
-
-	void ReadPhoneBookSortByAddress() const;
+	void ReadPhoneBookSorted(const BinaryTree* tree) const;
 
 public:
 	PhoneBook(char* argv);
@@ -20,5 +20,5 @@ public:
 
 	bool IsOpen() const;
 
-	void ReadPhoneBook() const;
+	void ReadPhoneBook();
 };
