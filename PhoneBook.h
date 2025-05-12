@@ -13,6 +13,10 @@ private:
 
 	void ReadPhoneBookSorted(const BinaryTree* tree) const;
 
+	void InputInfoAboutNewNumber(const char* text, char* record, size_t size);
+
+	void WriteNewRecordIntoFile(const char* text);
+
 public:
 	PhoneBook(char* argv);
 
@@ -21,4 +25,6 @@ public:
 	bool IsOpen() const;
 
 	void ReadPhoneBook();
+
+	void AddNewNumber();
 };

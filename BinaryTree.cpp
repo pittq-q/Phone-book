@@ -143,9 +143,9 @@ void BinaryTree::ShowATree(Node* node) const
 	if (node->left != nullptr)
 		ShowATree(node->left);
 
-	std::cout << "Full Name: " << node->record.fullName << std::endl
+	std::cout << "\nFull Name: " << node->record.fullName << std::endl
 		<< "Phone Number: " << node->record.phoneNumber << std::endl
-		<< "Address: " << node->record.address << std::endl << std::endl;
+		<< "Address: " << node->record.address << std::endl;
 
 	if (node->right != nullptr)
 		ShowATree(node->right);

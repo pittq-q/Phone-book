@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
 			phoneBook.ReadPhoneBook();
 			break;
 		case 2:
-
+			phoneBook.AddNewNumber();
 			break;
 		case 3:
 
